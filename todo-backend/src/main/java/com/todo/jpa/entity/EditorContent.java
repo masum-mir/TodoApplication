@@ -3,7 +3,8 @@ package com.todo.jpa.entity;
 import jakarta.persistence.*;
 
 @Entity
-public class EditorComponent {
+@Table(name = "content")
+public class EditorContent {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

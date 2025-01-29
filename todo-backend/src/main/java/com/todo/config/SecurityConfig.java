@@ -74,6 +74,7 @@ public class SecurityConfig {
         http.cors().configurationSource(corsConfigurationSource())
                 .and().csrf().disable().authorizeHttpRequests(auth -> auth
                         .requestMatchers("/api/auth/**").permitAll()
+                        .requestMatchers("/api/editor/**").permitAll()
                         .requestMatchers("/api/todos/**").hasAnyRole("USER","ADMIN")
                         .anyRequest().authenticated())
                 .exceptionHandling(exception ->

@@ -7,6 +7,8 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+import java.util.ArrayList;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 @SpringBootApplication
@@ -17,6 +19,9 @@ public class Main implements WebMvcConfigurer {
         // to see how IntelliJ IDEA suggests fixing it.
         SpringApplication.run(Main.class, args);
         System.out.printf("Hello || welcome!");
+
+        ArrayList nm = new ArrayList();
+
     }
     @Override
     public void addCorsMappings(CorsRegistry registry) {
